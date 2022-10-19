@@ -19,7 +19,7 @@ import rotation.RotationT;
 public class Main {
   private final static Integer[] arr = new Integer[]{90, 180, 270};
   private final static RotationT rot = new RotationT();
-  private final static String[] etape = new String[]{
+  private final static String[] steps = new String[]{
 	      "Reading of runtime data was done in  ",
 	      "Reading of input file was done in  ",
 	      "The image was rotated in  ",
@@ -30,7 +30,7 @@ public class Main {
 
     long startTime = System.currentTimeMillis();
     long endTime;
-    long[] timeElapsed = new long[etape.length];
+    long[] timeElapsed = new long[steps.length];
 
     Scanner sc = new Scanner(System.in);
 
@@ -139,7 +139,7 @@ public class Main {
     timeElapsed[3] = endTime - startTime;
 
     for (int i = 0; i < 4; ++i)
-      System.out.println(etape[i] + (float)timeElapsed[i]/1000 + " secunde.");
+      System.out.println(steps[i] + (float)timeElapsed[i]/1000 + " seconds.");
 
     sc.close();
     sc = null;
